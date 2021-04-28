@@ -16,7 +16,7 @@ from sklearn.model_selection import GridSearchCV
 
 
 def load_data(database_filepath):
-    
+
     engine = create_engine('sqlite:///'+ database_filepath)
     df = pd.read_sql_table(table_name=engine.table_names()[0],con='sqlite:///'+database_filepath)
     X = df['message'].values
@@ -25,6 +25,7 @@ def load_data(database_filepath):
 
 
 def tokenize(text):
+    
     url_regex = 'http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\(\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+'
     detected_urls = re.findall(url_regex, text)
     for url in detected_urls:
