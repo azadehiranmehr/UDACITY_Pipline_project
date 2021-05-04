@@ -7,14 +7,18 @@ def load_data(messages_filepath, categories_filepath):
     categories = pd.read_csv(categories_filepath)
     return pd.merge(messages,categories,on='id')
 
-
+def is_notone(inputs):
+    if inputs == '2':
+        return '1'
+    else:
+        return inputs
 def clean_data(df):
     categories = df['categories'].str.split(";",expand=True,)
     row = categories.iloc[0]
     category_colnames = row.apply(lambda x:x.split('-')[0])
     categories.columns = category_colnames
     for column in categories:
-        categories[column] = categories[column].apply(lambda x:x.split('-')[1])
+        categories[column] = categories[column].apply(lambda x:is_notone(x.split('-')[1]))
         categories[column] = categories[column].astype(int)
     df = df.drop('categories', axis=1)
     df =  pd.concat([df,categories],sort=False ,axis=1)
