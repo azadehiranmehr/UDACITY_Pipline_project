@@ -66,7 +66,7 @@ def build_model():
 
 def evaluate_model(model, X_test, Y_test, category_names):
     y_pred = model.predict(X_test)
-    for i in range(len(Y)):
+    for i in range(len(Y_test)):
         print(classification_report(y_pred=y_pred[:,i],y_true=y_test[:,i]))
     
 
