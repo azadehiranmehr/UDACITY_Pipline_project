@@ -14,22 +14,22 @@ There are three components completed for this project.
 
 1. ETL Pipeline: In a Python script, process_data.py,  a data cleaning pipeline was wrot that:
 
- - Loads the messages and categories datasets
- - Merges the two datasets
- - Cleans the data
- - Stores it in a SQLite database
+   - Loads the messages and categories datasets
+   - Merges the two datasets
+   - Cleans the data
+   - Stores it in a SQLite database
 2. ML Pipeline: In a Python script, train_classifier.py,  a machine learning pipeline was wrot that:
 
- - Loads data from the SQLite database
- - Splits the dataset into training and test set
- - Builds a text processing and machine learning pipeline
- - Trains and tunes a model using GridSearchCV
- - Outputs results on the test set
- - Exports the final model as a pickle file
+   - Loads data from the SQLite database
+   - Splits the dataset into training and test set
+   - Builds a text processing and machine learning pipeline
+   - Trains and tunes a model using GridSearchCV
+   - Outputs results on the test set
+   - Exports the final model as a pickle file
 3. Flask Web App : Udacity provided much of the flask web app for us. For this part, I did folowing tasks:
 
- - Modify file paths for database and model as needed
- - Add data visualizations using Plotly in the web app. One example is provided for you
+   - Modify file paths for database and model as needed
+   - Add data visualizations using Plotly in the web app. One example is provided for you
 
 These 3 components are located in 3 following folders:
 - app: 
@@ -40,19 +40,19 @@ These 3 components are located in 3 following folders:
 
 - data:
 
- 1- disaster_categories.csv # data to process
+    1- disaster_categories.csv # data to process
 
- 2- disaster_messages.csv # data to process
+    2- disaster_messages.csv # data to process
 
- 3- process_data.py
+    3- process_data.py
 
- 4- InsertDatabaseName.db # database to save clean data to
+    4- InsertDatabaseName.db # database to save clean data to
 
 - models:
 
- 1- train_classifier.py
+    1- train_classifier.py
 
- 2- classifier.pkl # saved model
+    2- classifier.pkl # saved model
 
 README.md
 
