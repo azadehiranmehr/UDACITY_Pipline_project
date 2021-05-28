@@ -32,17 +32,28 @@ There are three components completed for this project.
  - Add data visualizations using Plotly in the web app. One example is provided for you
 
 These 3 components are located in 3 following folders:
-- app
+- app: 
+
     1- template(1-1- master.html # main page of web app . 1-2- go.html # classification result page of web app)
+
     2- run.py # Flask file that runs app
-- data
+
+- data:
+
  1- disaster_categories.csv # data to process
+
  2- disaster_messages.csv # data to process
+
  3- process_data.py
+
  4- InsertDatabaseName.db # database to save clean data to
-- models
+
+- models:
+
  1- train_classifier.py
+
  2- classifier.pkl # saved model
+
 README.md
 
 
