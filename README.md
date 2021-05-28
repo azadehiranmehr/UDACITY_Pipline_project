@@ -33,18 +33,16 @@ There are three components completed for this project.
 
 These 3 components are located in 3 following folders:
 - app
- -- template
- -- master.html # main page of web app
- -- go.html # classification result page of web app
- -- run.py # Flask file that runs app
+    1- template(1-1- master.html # main page of web app . 1-2- go.html # classification result page of web app)
+    2- run.py # Flask file that runs app
 - data
- -- disaster_categories.csv # data to process
- -- disaster_messages.csv # data to process
- -- process_data.py
- -- InsertDatabaseName.db # database to save clean data to
+ 1- disaster_categories.csv # data to process
+ 2- disaster_messages.csv # data to process
+ 3- process_data.py
+ 4- InsertDatabaseName.db # database to save clean data to
 - models
- -- train_classifier.py
- -- classifier.pkl # saved model
+ 1- train_classifier.py
+ 2- classifier.pkl # saved model
 README.md
 
 
