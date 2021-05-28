@@ -10,6 +10,44 @@ The most obvious feature of those data messages is they are highly imbalanced. S
 
 After building and training such a model, we can next launch a web service which can label new messages from users' input.
 
+Project Components
+There are three components completed for this project.
+
+1. ETL Pipeline: In a Python script, process_data.py,  a data cleaning pipeline was wrot that:
+
+- Loads the messages and categories datasets
+- Merges the two datasets
+- Cleans the data
+- Stores it in a SQLite database
+2. ML Pipeline: In a Python script, train_classifier.py,  a machine learning pipeline was wrot that:
+
+- Loads data from the SQLite database
+- Splits the dataset into training and test set
+- Builds a text processing and machine learning pipeline
+- Trains and tunes a model using GridSearchCV
+- Outputs results on the test set
+- Exports the final model as a pickle file
+3. Flask Web App : Udacity provided much of the flask web app for us. For this part, I did folowing tasks:
+
+- Modify file paths for database and model as needed
+- Add data visualizations using Plotly in the web app. One example is provided for you
+
+These 3 components are located in 3 folowing folders:
+app
+| - template
+| |- master.html # main page of web app
+| |- go.html # classification result page of web app
+|- run.py # Flask file that runs app
+data
+|- disaster_categories.csv # data to process
+|- disaster_messages.csv # data to process
+|- process_data.py
+|- InsertDatabaseName.db # database to save clean data to
+models
+|- train_classifier.py
+|- classifier.pkl # saved model
+README.md
+
 Instructions:
 Run the following commands in the project's root directory to set up the database and model.
 
@@ -21,7 +59,6 @@ Run the following command in the app's directory to run the web app python run.p
 
 Go to http://0.0.0.0:3001/ to use the web app to query your own message and see some visualizations about the original dataset.
 
-you can check two jupyter notebooks in the main directory to see the details of data processing and machine learning model building, .
 
 Requirements
 Python 3.5+
