@@ -12,13 +12,13 @@ After building and training such a model, we can next launch a web service which
 
 There are three components completed for this project.
 
-1. ETL Pipeline: In a Python script, process_data.py,  a data cleaning pipeline was wrot that:
+1. ETL Pipeline: In a Python script, process_data.py,  a data cleaning pipeline was written that:
 
    - Loads the messages and categories datasets
    - Merges the two datasets
    - Cleans the data
    - Stores it in a SQLite database
-2. ML Pipeline: In a Python script, train_classifier.py,  a machine learning pipeline was wrot that:
+2. ML Pipeline: In a Python script, train_classifier.py,  a machine learning pipeline was written that:
 
    - Loads data from the SQLite database
    - Splits the dataset into training and test set

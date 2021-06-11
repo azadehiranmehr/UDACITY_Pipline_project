@@ -65,6 +65,10 @@ def build_model():
 
 
 def evaluate_model(model, X_test, Y_test, category_names):
+    """Report the f1 score, precision and recall for each output category of the dataset. 
+       parameters : model,X_test,Y_test, category_names
+       output: print classification_report
+       """
     y_pred = model.predict(X_test)
     for i in range(len(Y_test)):
         print(classification_report(y_pred=y_pred[:,i],y_true=y_test[:,i]))
@@ -72,6 +76,11 @@ def evaluate_model(model, X_test, Y_test, category_names):
 
 
 def save_model(model, model_filepath):
+    """
+     Export our model as a pickle file
+     parameters: model, model_filepath
+    
+     """
     pickle.dump(model, open(model_filepath, 'wb'))
 
 
